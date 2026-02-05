@@ -50,11 +50,10 @@ if uploaded_file is not None:
    if label == "":
       label = "Bishop"
 
-   img_label = prediction[0]
    confidence_index = int(prediction[1])
    confidence = prediction[2][confidence_index]
 
-   st.text(f"{img_label} , {confidence}% confidence.")
+   st.text(f"{label} , {confidence}% confidence.")
    st.image(uploaded_file, caption="UploadedImage", use_container_width=True)
 
 
